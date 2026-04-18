@@ -1,4 +1,4 @@
-# 🔐 Gerador de Senhas
+# Gerador de Senhas
 
 Projeto desenvolvido com HTML, CSS e JavaScript puro.  
 Permite criar senhas aleatórias e seguras de forma simples e rápida.

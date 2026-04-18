@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>🔐 Gerador de Senhas</h1>
+      <p class="subtitle">Crie senhas seguras e aleatórias</p>
+
+      <div class="password-box">
+        <span id="password">Clique em "Gerar Senha"</span>
+        <button id="copyBtn" onclick="copiarSenha()">Copiar</button>
+      </div>
+
+      <div class="opcoes">
+
+        <div class="comprimento">
+          <label>Comprimento: <strong id="lengthVal">16</strong> caracteres</label>
+          <input
+            type="range"
+            id="lengthSlider"
+            min="6"
+            max="32"
+            value="16"
+            oninput="document.getElementById('lengthVal').textContent = this.value"
+          />
+        </div>
+
+        <div class="checkboxes">
+          <label><input type="checkbox" id="maiusculas" checked /> Maiúsculas (A-Z)</label>
+          <label><input type="checkbox" id="minusculas" checked /> Minúsculas (a-z)</label>
+          <label><input type="checkbox" id="numeros" checked /> Números (0-9)</label>
+          <label><input type="checkbox" id="simbolos" /> Símbolos (!@#$)</label>
+        </div>
+
+      </div>
+
+      <button class="btn-gerar" onclick="gerarSenha()">Gerar Senha</button>
+
+      <div class="forca-container">
+        <div class="barra-forca">
+          <div class="barra-fill" id="forcaFill"></div>
+        </div>
+        <p id="forcaLabel"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
